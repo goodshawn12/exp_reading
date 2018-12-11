@@ -23,11 +23,11 @@ array {
       "sleepy"  ;
       "difficult"  ;
       "frantic"  ;
-		"brief"  ;
-		"admire"  ;
-		"unusual"  ;
-		"edit"  ;
-		"betray"  ;
+      "brief"  ;
+      "admire"  ;
+      "unusual"  ;
+      "edit"  ;
+      "betray"  ;
    };
 } vocabulary_ssat_lower;    
 
@@ -39,11 +39,11 @@ array {
       "sentimental"  ;
       "compassionate"  ;
       "meek"  ;
-		"engaging"  ;
-		"courteous"  ;
-		"dejected"  ;
-		"headstrong"  ;
-		"exasperate"  ;
+      "engaging"  ;
+      "courteous"  ;
+      "dejected"  ;
+      "headstrong"  ;
+      "exasperate"  ;
    };
 } vocabulary_ssat_middle; 
 
@@ -55,11 +55,11 @@ array {
       "rendevous"  ;
       "eulogize"  ;
       "peccadillo"  ;
-		"titanic"  ;
-		"rambunctious"  ;
-		"disdain"  ;
-		"invigorate"  ;
-		"hamper"  ;
+      "titanic"  ;
+      "rambunctious"  ;
+      "disdain"  ;
+      "invigorate"  ;
+      "hamper"  ;
    };
 } vocabulary_ssat_upper; 
 
@@ -71,11 +71,11 @@ array {
       "cajole"  ;
       "caustic"  ;
       "decimate"  ;
-		"torpor"  ;
-		"estrange"  ;
-		"malleable"  ;
-		"mercurial"  ;
-		"recluse"  ;
+      "torpor"  ;
+      "estrange"  ;
+      "malleable"  ;
+      "mercurial"  ;
+      "recluse"  ;
    };
 } vocabulary_sat; 
 
@@ -87,11 +87,11 @@ array {
       "blight"  ;
       "cacophony"  ;
       "confound"  ;
-		"ephemeral"  ;
-		"inert"  ;
-		"plethora"  ;
-		"vilify"  ;
-		"winsome"  ;
+      "ephemeral"  ;
+      "inert"  ;
+      "plethora"  ;
+      "vilify"  ;
+      "winsome"  ;
    };
 } vocabulary_gre_lower;
 
@@ -103,11 +103,11 @@ array {
       "canonical"  ;
       "demur"  ;
       "dictim"  ;
-		"effigy"  ;
-		"fetid"  ;
-		"imbue"  ;
-		"opine"  ;
-		"tout"  ;
+      "effigy"  ;
+      "fetid"  ;
+      "imbue"  ;
+      "opine"  ;
+      "tout"  ;
    };
 } vocabulary_gre_middle;
 
@@ -119,11 +119,11 @@ array {
       "egress"  ;
       "fracas"  ;
       "iconoclast"  ;
-		"lambaste"  ;
-		"neophyte"  ;
-		"polemic"  ;
-		"umbrage"  ;
-		"winnow"  ;
+      "lambaste"  ;
+      "neophyte"  ;
+      "polemic"  ;
+      "umbrage"  ;
+      "winnow"  ;
    };
 } vocabulary_gre_upper;   
 
@@ -230,17 +230,42 @@ loop
 until
    nTrial > 10
 begin
-   bool difficulty = bool( random( 0, 1 ) );
-   if difficulty then
+   int difficulty = int( random( 1, 7 ) );
+   if difficulty == 1 then
       int pic = random( 1, vocabulary_ssat_lower.count() );
       event1.set_stimulus( vocabulary_ssat_lower[pic] );
       event1.set_event_code( "ssat lower" + string( pic ) );
-   else                  
+   else if difficulty == 2 then                 
       int pic = random( 1, vocabulary_ssat_middle.count() );
       event1.set_stimulus( vocabulary_ssat_middle[pic] );
-      event1.set_event_code( "ssat middle" + string( pic ) );  
+      event1.set_event_code( "ssat middle" + string( pic ) );
+	else if difficulty == 3 then
+		int pic = random( 1, vocabulary_ssat_upper.count() );
+      event1.set_stimulus( vocabulary_ssat_upper[pic] );
+      event1.set_event_code( "ssat upper" + string( pic ) );
+	else if difficulty == 4 then
+		int pic = random( 1, vocabulary_sat.count() );
+      event1.set_stimulus( vocabulary_sat[pic] );
+      event1.set_event_code( "sat" + string( pic ) );
+	else if difficulty == 5 then
+		int pic = random( 1, vocabulary_gre_lower.count() );
+      event1.set_stimulus( vocabulary_gre_lower[pic] );
+      event1.set_event_code( "gre lower" + string( pic ) );
+	else if difficulty == 6 then
+		int pic = random( 1, vocabulary_gre_middle.count() );
+      event1.set_stimulus( vocabulary_gre_middle[pic] );
+      event1.set_event_code( "gre middle" + string( pic ) );
+	else
+		int pic = random( 1, vocabulary_gre_upper.count() );
+      event1.set_stimulus( vocabulary_gre_upper[pic] );
+      event1.set_event_code( "gre upper" + string( pic ) );
    end;
    exp1_main_trial.present();
    
    nTrial = nTrial + 1
+end
+end
+end
+end
+end
 end
