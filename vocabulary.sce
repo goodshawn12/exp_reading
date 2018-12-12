@@ -2,8 +2,8 @@
 
 scenario = "exp1_vocabulary";
 
-active_buttons = 1;
-button_codes = 1;
+active_buttons = 6;
+button_codes = 1,2,3,4,5,6; # Make sure 1-5 are the right numbers in Response Panel for confidence level
 
 default_font_size = 24;
 default_text_color = 200, 200, 200;
@@ -164,7 +164,7 @@ picture {
 
 picture {
    text {
-      caption = "How confident you are in \nknowing the meaning of this word?";
+      caption = "How confident are you in your answer? \n \n \n 1 \t \t \t \t \t \t \t 2 \t \t \t \t \t \t \t 3 \t \t \t \t \t \t \t  4 \t \t \t \t \t \t \t 5 \n (not confident)\t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t(very confident)";
 		font_size = 12;
    };
    x = 0; y =0;
