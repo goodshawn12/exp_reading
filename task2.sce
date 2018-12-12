@@ -15,40 +15,45 @@ begin;
 
 picture {} default;
 
-# words from SSAT lower level
+# questions from SAT 
 array {
-	TEMPLATE "template_task1.tem" {
-		question			opt1 				opt2 				opt3 				opt4 				opt5 				word_code ;
-		"Greek yogurt contains slightly more protein per serving, thereby helping people stay _____ for longer periods of time" 			"(1) kind" 		"(2) sick"		"(3) chilly"	"(4) light"		"(5) hot" 			"easy_1";
-		"cooperate"		"(1) join" 		"(2) help" 		"(3) delay"		"(4) finish"	"(5) substitute" 	"easy_2";
-		"sleepy"			"(1) perky"		"(2) fast"		"(3) tired"		"(4) sad"		"(5) hungry"		"easy_3";
-		"difficult"		"(1) soft"		"(2) hard"		"(3) light"		"(4) gentle"	"(5) simple"		"easy_4";
-		"frantic"		"(1) inferior"	"(2) worried"	"(3) reluctant""(4) paranoid"	"(5) depressed"	"easy_5";
-		"frightful"		"(1) horrible" "(2) deceitful""(3) vengeful"	"(4) shameful"	"(5) spectacular"	"easy_6";
-		"brief"			"(1) hide"		"(2) long"		"(3) short"		"(4) secret"	"(5) manuscript"	"easy_7";
-		"admire"			"(1) crave"		"(2) pretty"	"(3) desire"	"(4) delight"	"(5) appreciate"	"easy_8";
-		"unusual"		"(1) bad"		"(2) native"	"(3) regular"	"(4) abnormal" "(5) appropriate" "easy_9";
-		"edit"			"(1) reuse"		"(2) revise"	"(3) reduce"	"(4) reduce"	"(5) redefine"		"easy_10";
+	TEMPLATE "template_task2.tem" {
+		question																																										opt1 					opt2 				opt3 				opt4 					opt5 			word_code ;
+		"Greek yogurt contains slightly more protein per serving, thereby helping people stay _____ for longer periods of time." 			"(1) satiated" "(2) fulfilled" "(3) complacent" "(4) sufficient"		"(5) ?" 	   "med2_1";
+		"Kelp forests protected by sea otter absorb more carbon dioxide than those where sea urchins are allowed to _____ the kelp."		"(1) devour" 	"(2) dispatch"  "(3) overindulge on" "(4) dispose of""(5) ?" 		"med2_2";
+		"Planned obsolescence increases sales, but it also stands in _____ contrast to a time when goods were produced to be durable."	"(1) austere"	"(2) egregious" "(3) unmitigated"	 "(4) stark"		"(5) ?"		"med2_3";
+		"The food was from fine restaurants, so it was leagues beyond the _____ fare travelers were accustomed to eating."					"(1) sinister"	"(2) surly"	  	 "(3) abysmal"		"(4) icky"			"(5) ?"			"med2_4";
+		"Some added preservatives keep apples ____ and crisp for months."																						"(1) tight"		"(2) firm"		 "(3) stiff"		"(4) taut"			"(5) ?"			"med2_5";
+		"The cats were so cherished by the museum that officials recently _____ original paintings to be made of them."						"(1) decreed"  "(2) commissioned""(3) forced"	"(4) licensed"		"(5) ?"			"med2_6";
+		"The reason for his secrecy became clear when the mural was _____."																					"(1) confided"	"(2) promulgated"	"(3) imparted"	"(4) unveiled"		"(5) ?"			"med2_7";
+		"Although advocates of organic food ____ that it is healthier than conventionally grown produce, this is not supported by scientific research."	"(1) preserve"	"(2) carry on"	"(3) maintain"	"(4) sustain""(5) ?"	"med2_8";
+		"Courses in psychology and human behavior may help you develop ____ collaboration skills."													"(1) emphatic"	"(2) paramount" "(3) eminent"	 	"(4) important" 	"(5) ?" 			"med2_9";
+		"These models have expanded researchers' knowledge of ancient species and ____ to advance the field in the years to come."			"(1) swear"		"(2) subscribe" "(3) vow"			"(4) promise"		"(5) ?"			"med2_10";
+		"The Leaning Tower of Pisa is seen as one of the greatest architectural _____ in the world."													"(1) weirdnesses"	"(2) deviations" "(3) oddities" "(4) abnormalities" "(5) ?"		"med2_11";
+		"____ medical-college enrollments and expanding physician training programs is too slow and costly."										"(1) amping up""(2) bolstering" "(3) arounsing" "(4) revving up"	"(5) ?"			"med2_12";
+		"The practice is almost as ____ as the medium itself."																									"(1) elderly"	"(2) old"		 "(3) mature"		"(4) geriatric"	"(5) ?"			"med2_13";
+		"A short list of inventions ____ by NASA includes satellites, invisible braces, and cordless tools."										"(1) elaborated" "(2) evolved" "(3) developed"	"(4) progressed"	"(5) ?"			"med2_14";
+		"Organic material sent to landfills contributes to the release of methane, a very ____ greenhouse gas."									"(1) potent"	"(2) sturdy" 	 "(3) influential""(4) commanding"	"(5) ?"			"med2_15";
 	};
-} task1_stim_easy; 
+} task2_stim_med; 
 
-# words from SSAT upper level
+# questions from GRE
 array {
-	TEMPLATE "template_task1.tem" {
-		question			opt1 						opt2 							opt3 					opt4 				opt5 				word_code;
-		"integrate" 	"(1) bring togther" 	"(2) settle accounts"	"(3) press on"		"(4) create"	"(5) argue" 		"med_1";
-		"predicament"	"(1) forecast"		 	"(2) plight" 				"(3) sorrow"		"(4) regret"	"(5) dominance" 	"med_2";
-		"rendevous"		"(1) response"			"(2) invitation"			"(3) score"			"(4) meeting"	"(5) momento"		"med_3";
-		"eulogize"		"(1) condemn"			"(2) preach"				"(3) flatter"		"(4) commend"	"(5) put down"		"med_4";
-		"peccadillo"	"(1) instrument"		"(2) flavor"				"(3) dishonesty"	"(4) grave error" "(5) minor offene" "med_5";
-		"titanic"		"(1) nautical"			"(2) romantic"				"(3) enormous"		"(4) mythical"	"(5) smooth"		"med_5";
-		"rambunctious"	"(1) dependent"		"(2) energetic"			"(3) disagreeable""(4) argumentative" "(5) tame"	"med_6";
-		"disdain"		"(1) contempt"			"(2) appreciation"		"(3) descent"		"(4) fragile"	"(5) indifference""med_7";
-		"invigorate"	"(1) weaken"			"(2) import"				"(3) dispute"		"(4) stimulate""(5) delay"			"med_8";
-		"hamper"			"(1) enclose"			"(2) restrict"				"(3) approve"		"(4) lower"		"(5) balance"		"med_9";
+	TEMPLATE "template_task2.tem" {
+		question																																																															opt1 				opt2 						opt3 					opt4 				opt5 				word_code;
+		"The 2017 Central Mexico earthquake happened to occur on the anniversary of an earthquake in 1985 that killed thoughsants and had just that day been ____ with a national disaster drill." 	"(1) rehearsed" 	"(2) calamitous"	"(3) commemorated" "(4) bequeathed"	"(5) deracinated" 		"hard_1";
+		"predicament"	"(1) forecast"		 	"(2) plight" 				"(3) sorrow"		"(4) regret"	"(5) dominance" 	"hard_2";
+		"rendevous"		"(1) response"			"(2) invitation"			"(3) score"			"(4) meeting"	"(5) momento"		"hard_3";
+		"eulogize"		"(1) condemn"			"(2) preach"				"(3) flatter"		"(4) commend"	"(5) put down"		"hard_4";
+		"peccadillo"	"(1) instrument"		"(2) flavor"				"(3) dishonesty"	"(4) grave error" "(5) minor offene" "hard_5";
+		"titanic"		"(1) nautical"			"(2) romantic"				"(3) enormous"		"(4) mythical"	"(5) smooth"		"hard_5";
+		"rambunctious"	"(1) dependent"		"(2) energetic"			"(3) disagreeable""(4) argumentative" "(5) tame"	"hard_6";
+		"disdain"		"(1) contempt"			"(2) appreciation"		"(3) descent"		"(4) fragile"	"(5) indifference""hard_7";
+		"invigorate"	"(1) weaken"			"(2) import"				"(3) dispute"		"(4) stimulate""(5) delay"			"hard_8";
+		"hamper"			"(1) enclose"			"(2) restrict"				"(3) approve"		"(4) lower"		"(5) balance"		"hard_9";
 		
 	};
-} task1_stim_medium; 
+} task2_stim_hard; 
 
 # Introductory slides
 picture {
@@ -61,14 +66,14 @@ picture {
       caption = "(Press response button to continue)";
    };
    x = 0; y = -200;
-} exp1;
+} exp2;
 
 picture {
    text {
       caption = "Rest for 1 min with eyes open";
    };
    x = 0; y =0;
-} rest1;
+} rest2;
 
 picture {
    text {
@@ -117,8 +122,8 @@ trial {
    trial_type = first_response;
    trial_duration = forever;
    
-   picture exp1;
-   code = "exp1";
+   picture exp2;
+   code = "exp2";
 };
 
 # Rest
@@ -126,8 +131,8 @@ trial {
 	trial_duration = 2000; 	# msec
 	
 	stimulus_event {
-		picture rest1;
-		code = "rest1";
+		picture rest2;
+		code = "rest2";
 	} event_rest;
 };
 
@@ -156,14 +161,14 @@ trial {
       nothing {};
 		time = 1000;
 		duration = 2000;
-   } event1;
+   } event2;
 
 	# Response
 	picture question_1;
 	time = 3500;
 	code = "end_trial";
 	
-} exp1_main_trial;
+} exp2_main_trial;
 
 # Break
 trial {
@@ -181,20 +186,20 @@ int num_trial_per_block = 2;
 int num_block = 2;
 
 # append all stimuli
-array<picture> task1_stim_all [0];
-task1_stim_all.append( task1_stim_easy );
-task1_stim_all.append( task1_stim_medium );
+array<picture> task2_stim_all [0];
+task2_stim_all.append( task2_stim_med );
+task2_stim_all.append( task2_stim_hard );
 
 # shuffle the word array before running the loop
-task1_stim_all.shuffle();
+task2_stim_all.shuffle();
 
 loop int blockID = 1 until blockID > num_block
 begin
 	loop int trialID = 1 until trialID > num_trial_per_block  # task1_stim_all.count()
 	begin
-		event1.set_stimulus( task1_stim_all[ (blockID-1)*num_block + trialID ] );
+		event2.set_stimulus( task2_stim_all[ (blockID-1)*num_block + trialID ] );
 		# event1.set_event_code( task1_stim_all[trialID].description() );
-		exp1_main_trial.present();
+		exp2_main_trial.present();
 		
 		trialID = trialID + 1;
 	end;
