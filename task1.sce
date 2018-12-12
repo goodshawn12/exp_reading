@@ -18,18 +18,18 @@ picture {} default;
 # words from SSAT lower level
 array {
 	TEMPLATE "template_task1.tem" {
-		question			opt1 			opt2 			opt3 			opt4 			opt5 				word_code ;
-		"cold" 			"kind" 		"sick"		"chilly"		"light"		"hot" 			"easy_1";
-		"cooperate"		"join" 		"help" 		"delay"		"finish"		"substitute" 	"easy_2";
+		question			opt1 				opt2 				opt3 				opt4 				opt5 				word_code ;
+		"cold" 			"(1) kind" 		"(2) sick"		"(3) chilly"	"(4) light"		"(5) hot" 			"easy_1";
+		"cooperate"		"(1) join" 		"(2) help" 		"(3) delay"		"(4) finish"	"(5) substitute" 	"easy_2";
 	};
 } task1_stim_easy; 
 
 # words from SSAT upper level
 array {
 	TEMPLATE "template_task1.tem" {
-		question			opt1 						opt2 						opt3 				opt4 			opt5 				word_code;
-		"integrate" 	"bring togther" 		"settle accounts"		"press on"		"create"		"argue" 			"med_1";
-		"predicament"	"forecast"		 		"plight" 				"sorrow"			"regret"		"dominance" 	"med_2";
+		question			opt1 						opt2 							opt3 					opt4 				opt5 				word_code;
+		"integrate" 	"(1) bring togther" 	"(2)settle accounts"		"(3) press on"		"(4) create"	"(5) argue" 			"med_1";
+		"predicament"	"(1) forecast"		 	"(2)plight" 				"(3) sorrow"		"(4) regret"	"(5) dominance" 	"med_2";
 	};
 } task1_stim_medium; 
 
@@ -60,6 +60,18 @@ picture {
    };
    x = 0; y =0;
 } start;
+
+picture {
+   text {
+      caption = "Break Time!";
+   };
+   x = 0; y =0;
+	text {
+      caption = "(Press response button to continue)";
+		font_size = 12;
+   };
+   x = 0; y = -100;
+} break;
 
 # Stimuli for each trial
 picture {
@@ -136,10 +148,20 @@ trial {
 	
 } exp1_main_trial;
 
+# Break
+trial {
+	trial_type = first_response;
+   trial_duration = forever;
+	
+	picture break;
+   code = "break";
+} exp_break;
 
 begin_pcl;
 
 # PCL part
+int num_trial_per_block = 2;
+int num_block = 2;
 
 # append all stimuli
 array<picture> task1_stim_all [0];
@@ -149,14 +171,20 @@ task1_stim_all.append( task1_stim_medium );
 # shuffle the word array before running the loop
 task1_stim_all.shuffle();
 
-loop 
-   int trialID = 1
-until
-   trialID > task1_stim_all.count()
+loop int blockID = 1 until blockID > num_block
 begin
-   event1.set_stimulus( task1_stim_all[trialID] );
-	# event1.set_event_code( task1_stim_all[trialID].description() );
-   exp1_main_trial.present();
-   
-   trialID = trialID + 1
-end
+	loop int trialID = 1 until trialID > num_trial_per_block  # task1_stim_all.count()
+	begin
+		event1.set_stimulus( task1_stim_all[ (blockID-1)*num_block + trialID ] );
+		# event1.set_event_code( task1_stim_all[trialID].description() );
+		exp1_main_trial.present();
+		
+		trialID = trialID + 1;
+	end;
+	
+	if (blockID != num_block) then
+		exp_break.present();
+	end;
+	
+	blockID = blockID + 1;
+end;
