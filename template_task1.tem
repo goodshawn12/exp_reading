@@ -1,5 +1,8 @@
 picture {
 
+	# code
+	default_code = $word_code;
+
 	# display question
 	text {
       caption = $question;

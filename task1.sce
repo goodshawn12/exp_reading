@@ -18,18 +18,18 @@ picture {} default;
 # words from SSAT lower level
 array {
 	TEMPLATE "template_task1.tem" {
-		question			opt1 			opt2 			opt3 			opt4 			opt5 				;
-		"cold" 			"kind" 		"sick"		"chilly"		"light"		"hot" 			;
-		"cooperate"		"join" 		"help" 		"delay"		"finish"		"substitute" 	;
+		question			opt1 			opt2 			opt3 			opt4 			opt5 				word_code ;
+		"cold" 			"kind" 		"sick"		"chilly"		"light"		"hot" 			"easy_1";
+		"cooperate"		"join" 		"help" 		"delay"		"finish"		"substitute" 	"easy_2";
 	};
 } task1_stim_easy; 
 
 # words from SSAT upper level
 array {
 	TEMPLATE "template_task1.tem" {
-		question			opt1 						opt2 						opt3 				opt4 			opt5 				;
-		"integrate" 	"bring togther" 		"settle accounts"		"press on"		"create"		"argue" 			;
-		"predicament"	"forecast"		 		"plight" 				"sorrow"			"regret"		"dominance" 	;
+		question			opt1 						opt2 						opt3 				opt4 			opt5 				word_code;
+		"integrate" 	"bring togther" 		"settle accounts"		"press on"		"create"		"argue" 			"med_1";
+		"predicament"	"forecast"		 		"plight" 				"sorrow"			"regret"		"dominance" 	"med_2";
 	};
 } task1_stim_medium; 
 
@@ -150,7 +150,7 @@ until
    trialID > task1_stim_all.count()
 begin
    event1.set_stimulus( task1_stim_all[trialID] );
-	event1.set_event_code( task1_stim_all[trialID] )
+	# event1.set_event_code( task1_stim_all[trialID].description() );
    exp1_main_trial.present();
    
    trialID = trialID + 1
