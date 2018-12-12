@@ -1,0 +1,39 @@
+picture {
+
+	# display question
+	text {
+      caption = $question;
+   };
+   x = 0; y = 200;
+
+	# 1st choice
+	text {
+      caption = $opt1;
+   };
+   x = -200; y = 0;
+
+	# 2nd choice
+	text {
+      caption = $opt2;
+   };
+   x = -200; y = -100;
+
+	# 3rd choice
+	text {
+      caption = $opt3;
+   };
+   x = -200; y = -200;
+
+	# 4th choice
+	text {
+      caption = $opt4;
+   };
+   x = 200; y = 0;
+
+	# 5th choice
+	text {
+      caption = $opt5;
+   };
+   x = 200; y = -100;
+
+};
