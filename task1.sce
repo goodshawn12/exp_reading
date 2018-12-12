@@ -50,6 +50,24 @@ array {
 	};
 } task1_stim_medium; 
 
+# words from GRE upper level
+array {
+	TEMPLATE "template_task1.tem" {
+		question			opt1 						opt2 							opt3 					opt4 				opt5 				word_code;
+		"abeyance" 		"(1) suspense" 		"(2) ?"						"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_1";
+		"compendium"	"(1) ?"			 		"(2) compilation"			"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_2";
+		"egress" 		"(1) ?" 					"(2) ?"						"(3) departure"	"(4) ?"			"(5) ?"		 		"hard_3";
+		"fracas" 		"(1) ?"			 		"(2) ?"						"(3) ?"				"(4) scuffle"	"(5) ?"		 		"hard_4";
+		"iconoclast" 	"(1) ?" 					"(2) ?"						"(3) ?"				"(4) ?"			"(5) critic"		"hard_5";
+		"lambaste" 		"(1) chastise" 		"(2) ?"						"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_6";
+		"neophyte" 		"(1) ?" 					"(2) beginner"				"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_7";
+		"polemic" 		"(1) ?" 					"(2) ?"						"(3) diatribe"		"(4) ?"			"(5) ?"		 		"hard_8";
+		"quiescence" 	"(1) ?" 					"(2) ?"						"(3) ?"				"(4) inactivity""(5) ?"		 		"hard_9";
+		"umbrage" 		"(1) ?" 					"(2) ?"						"(3) ?"				"(4) ?"			"(5) insult" 		"hard_10";
+		"winnow" 		"(1) sift out" 		"(2) ?"						"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_11";
+	};
+} task1_stim_hard; 
+
 # Introductory slides
 picture {
    text {
@@ -184,6 +202,7 @@ int num_block = 2;
 array<picture> task1_stim_all [0];
 task1_stim_all.append( task1_stim_easy );
 task1_stim_all.append( task1_stim_medium );
+task1_stim_all.append( task1_stim_hard );
 
 # shuffle the word array before running the loop
 task1_stim_all.shuffle();
