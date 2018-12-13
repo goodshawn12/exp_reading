@@ -158,30 +158,41 @@ trial {
 	code = "start";
 };
 
-# Task 1: present words and collect responses
+# Fixation point
 trial {
-	trial_type = first_response;
-	trial_duration = forever;
-	
 	# Cross 
 	picture cross;
 	time = 0;
 	duration = 800;
    code = "cross";
+} fix;
+
+/*
+# Task 1: present words and collect responses
+trial {
+	trial_type = first_response;
+	trial_duration = forever;
 
 	# Word
    stimulus_event {
       nothing {};
-		time = 1000;
-		duration = 2000;
+		time = 300;
+		code = "word_code"; # Change to code for specific image
    } event1;
-
-	# Response
-	picture question_1;
-	time = 3500;
-	code = "end_trial";
 	
 } exp1_main_trial;
+*/
+
+# Confidence question
+trial {
+	trial_type = first_response;
+	trial_duration = forever;
+	
+	# Ask confidence level
+	picture question_1;
+	time = 300;
+	code = "end_trial";
+} sure;
 
 # Break
 trial {
@@ -211,9 +222,13 @@ loop int blockID = 1 until blockID > num_block
 begin
 	loop int trialID = 1 until trialID > num_trial_per_block  # task1_stim_all.count()
 	begin
-		event1.set_stimulus( task1_stim_all[ (blockID-1)*num_block + trialID ] );
+		
+		# event1.set_stimulus( task1_stim_all[ (blockID-1)*num_block + trialID ] );
 		# event1.set_event_code( task1_stim_all[trialID].description() );
-		exp1_main_trial.present();
+		# exp1_main_trial.present();
+		fix.present();
+		task1_stim_all[ (blockID-1)*num_block + trialID ].present();
+		sure.present();
 		
 		trialID = trialID + 1;
 	end;

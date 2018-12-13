@@ -1,5 +1,8 @@
 trial {
-
+	
+	trial_type = first_response;
+	trial_duration = forever;
+	
 	# display question
 	picture {
 		text {
@@ -7,7 +10,19 @@ trial {
 			font_size = 32;
 		};
 		x = 0; y = 100;
-
+	};
+	time = 200;
+	code = $word_code;
+		
+	# display question and options
+	picture {
+		# question
+		text {
+			caption = $question;
+			font_size = 32;
+		};
+		
+		x = 0; y = 100;
 		# 1st choice
 		text {
 			caption = $opt1;
@@ -38,7 +53,6 @@ trial {
 		};
 		x = 100; y = -50;
 	};
-	time = 0;
+	time = 2200;
 	code = $word_code;
-
 };
