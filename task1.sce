@@ -54,17 +54,17 @@ array {
 array {
 	TEMPLATE "template_task1.tem" {
 		question			opt1 						opt2 							opt3 					opt4 				opt5 				word_code;
-		"abeyance" 		"(1) suspense" 		"(2) ?"						"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_1";
-		"compendium"	"(1) ?"			 		"(2) compilation"			"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_2";
-		"egress" 		"(1) ?" 					"(2) ?"						"(3) departure"	"(4) ?"			"(5) ?"		 		"hard_3";
-		"fracas" 		"(1) ?"			 		"(2) ?"						"(3) ?"				"(4) scuffle"	"(5) ?"		 		"hard_4";
-		"iconoclast" 	"(1) ?" 					"(2) ?"						"(3) ?"				"(4) ?"			"(5) critic"		"hard_5";
-		"lambaste" 		"(1) chastise" 		"(2) ?"						"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_6";
-		"neophyte" 		"(1) ?" 					"(2) beginner"				"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_7";
-		"polemic" 		"(1) ?" 					"(2) ?"						"(3) diatribe"		"(4) ?"			"(5) ?"		 		"hard_8";
-		"quiescence" 	"(1) ?" 					"(2) ?"						"(3) ?"				"(4) inactivity""(5) ?"		 		"hard_9";
-		"umbrage" 		"(1) ?" 					"(2) ?"						"(3) ?"				"(4) ?"			"(5) insult" 		"hard_10";
-		"winnow" 		"(1) sift out" 		"(2) ?"						"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_11";
+		"abeyance" 		"(1) suspense" 		"(2) stalemate"			"(3) laziness"		"(4) enquiry"	"(5) obscure" 		"hard_1";
+		"compendium"	"(1) bold"		 		"(2) compilation"			"(3) objective"	"(4) surplus"	"(5) enlargement"	"hard_2";
+		"egress" 		"(1) saying" 			"(2) expand"				"(3) departure"	"(4) disregard""(5) changeable" 	"hard_3";
+		"fracas" 		"(1) citation"	 		"(2) unusual"				"(3) refrain"		"(4) scuffle"	"(5) expert"		"hard_4";
+		"iconoclast" 	"(1) attraction" 		"(2) embodiment"			"(3) powerful"		"(4) old"		"(5) critic"		"hard_5";
+		"lambaste" 		"(1) chastise" 		"(2) hold back"			"(3) compliment"	"(4) repeal"	"(5) indifferent"	"hard_6";
+		"neophyte" 		"(1) perfectionist" 	"(2) beginner"				"(3) affliction"	"(4) attentive""(5) boaster"		"hard_7";
+		"polemic" 		"(1) shameful"			"(2) grumpy"				"(3) rant"			"(4) sneer"		"(5) flashy" 		"hard_8";
+		"quiescence" 	"(1) agreement"		"(2) offense"				"(3) disloyal"		"(4) inactivity""(5) approval"	"hard_9";
+		"umbrage" 		"(1) attack"			"(2) complain"				"(3) admiration"	"(4) tense"		"(5) insult" 		"hard_10";
+#		"winnow" 		"(1) sift out" 		"(2) ?"						"(3) ?"				"(4) ?"			"(5) ?"		 		"hard_11";
 	};
 } task1_stim_hard; 
 
