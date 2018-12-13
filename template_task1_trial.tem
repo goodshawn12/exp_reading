@@ -9,7 +9,7 @@ trial {
 			caption = $question;
 			font_size = 32;
 		};
-		x = 0; y = 100;
+		x = 0; y = 150;
 	};
 	time = 200;
 	code = $word_code;
@@ -22,36 +22,41 @@ trial {
 			font_size = 32;
 		};
 		
-		x = 0; y = 100;
+		x = 0; y = 150;
 		# 1st choice
 		text {
 			caption = $opt1;
+			font_size = 24;
 		};
-		x = -100; y = 0;
+		left_x = -250; y = 50;
 
 		# 2nd choice
 		text {
 			caption = $opt2;
+			font_size = 24;
 		};
-		x = -100; y = -50;
+		left_x = -250; y = -50;
 
 		# 3rd choice
 		text {
 			caption = $opt3;
+			font_size = 24;
 		};
-		x = -100; y = -100;
+		left_x = -250; y = -150;
 
 		# 4th choice
 		text {
 			caption = $opt4;
+			font_size = 24;
 		};
-		x = 100; y = 0;
+		left_x = 50; y = 50;
 
 		# 5th choice
 		text {
 			caption = $opt5;
+			font_size = 24;
 		};
-		x = 100; y = -50;
+		left_x = 50; y = -50;
 	};
 	time = 2200;
 	code = $word_code;
