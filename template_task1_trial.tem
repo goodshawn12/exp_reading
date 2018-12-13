@@ -1,0 +1,44 @@
+trial {
+
+	# display question
+	picture {
+		text {
+			caption = $question;
+			font_size = 32;
+		};
+		x = 0; y = 100;
+
+		# 1st choice
+		text {
+			caption = $opt1;
+		};
+		x = -100; y = 0;
+
+		# 2nd choice
+		text {
+			caption = $opt2;
+		};
+		x = -100; y = -50;
+
+		# 3rd choice
+		text {
+			caption = $opt3;
+		};
+		x = -100; y = -100;
+
+		# 4th choice
+		text {
+			caption = $opt4;
+		};
+		x = 100; y = 0;
+
+		# 5th choice
+		text {
+			caption = $opt5;
+		};
+		x = 100; y = -50;
+	};
+	time = 0;
+	code = $word_code;
+
+};
