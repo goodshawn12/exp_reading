@@ -119,15 +119,45 @@ picture {
 
 picture {
    text {
-      caption = "How confident are you in your answer?";
-		font_size = 12;
+      caption = "How confident are you \n in your answer?";
+		font_size = 24;
    };
-   x = 0; y =0;
+   x = 0; y =+100;
    text {
-      caption = "1 \t \t \t \t \t \t \t 2 \t \t \t \t \t \t \t 3 \t \t \t \t \t \t \t  4 \t \t \t \t \t \t \t 5 \n (not confident)\t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t(very confident)";
+      caption = "1";
+		font_size = 24;
+   };
+	x = -100; y =0;
+	  text {
+      caption = "2";
+		font_size = 24;
+   };
+	x = -50; y =0;
+		  text {
+      caption = "3";
+		font_size = 24;
+   };
+	x = 0; y =0;
+		  text {
+      caption = "4";
+		font_size = 24;
+   };
+	x = 50; y =0;
+		  text {
+      caption = "5";
+		font_size = 24;
+   };
+	x = 100; y =0;
+		  text {
+      caption = "(completely unsure)";
 		font_size = 12;
    };
-	x = 0; y =-100;
+	x = -100; y =-25;
+		  text {
+      caption = "(very confident)";
+		font_size = 12;
+   };
+	x = 100; y =-25;
 } question_1;
 
 # Introductory trial
@@ -158,31 +188,41 @@ trial {
 	code = "start";
 };
 
-# Task 1: present words and collect responses
+# Fixation point
 trial {
-	trial_type = first_response;
-	trial_duration = forever;
-	
 	# Cross 
 	picture cross;
 	time = 0;
 	duration = 800;
    code = "cross";
+} fix;
+
+# Task 1: present words and collect responses
+trial {
+	trial_type = first_response;
+	trial_duration = forever;
 
 	# Word
    stimulus_event {
       nothing {};
-		time = 1000;
-		duration = 2000;
+		time = 300;
+		code = "word_code"; # Change to code for specific image
    } event1;
-
-	# Response
-	picture question_1;
-	time = 3500;
-	code = "end_trial";
 	
 } exp1_main_trial;
 
+# Confidence question
+trial {
+	trial_type = first_response;
+	trial_duration = forever;
+	
+	# Ask confidence level
+	picture question_1;
+	time = 300;
+	code = "end_trial";
+} sure;
+	
+	
 # Break
 trial {
 	trial_type = first_response;
@@ -213,7 +253,9 @@ begin
 	begin
 		event1.set_stimulus( task1_stim_all[ (blockID-1)*num_block + trialID ] );
 		# event1.set_event_code( task1_stim_all[trialID].description() );
+		fix.present();
 		exp1_main_trial.present();
+		sure.present();
 		
 		trialID = trialID + 1;
 	end;
