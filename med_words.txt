@@ -1,0 +1,30 @@
+integrate,(*1.) bring togther,(2) settle accounts,(3) press on,(4) create,(5) argue,med_1
+predicament,(1) forecast,(*2.) plight,(3) sorrow,(4) regret,(5) dominance,med_2
+rendevous,(1) response,(2) invitation,(3) score,(*4.) meeting,(5) momento,med_3
+eulogize,(1) condemn,(2) preach,(3) flatter,(*4.) commend,(5) put down,med_4
+peccadillo,(1) instrument,(2) flavor,(*3.) minor offense,(4) grave error,(5) dishonesty,med_5
+titanic,(1) nautical,(2) romantic,(*3.) enormous,(4) mythical,(5) smooth,med_6
+rambunctious,(1) dependent,(2) argumentative,(3) disagreeable,(*4.) energetic,(5) tame,med_7
+disdain,(*1.) contempt,(2) appreciation,(3) descent,(4) fragile,(5) indifference,med_8
+invigorate,(1) weaken,(2) import,(3) dispute,(*4.) stimulate,(5) delay,med_9
+hamper,(1) enclose,(*2.) restrict,(3) approve,(4) lower,(5) balance,med_10
+scoff,(1) join,(2) polish,(*3.) make fun of,(4) seek out,(5) wear out,med_11
+quip,(1) loud call,(*2.) witticism,(3) remark,(4) question,(5) rude request,med_12
+potpurri,(1) assignment,(2) assistance,(3) accessory,(*4.) assortment,(5) allotment,med_13
+onerous,(1) practical,(2) deceitful,(3) truthful,(4) syncopated,(*5.) difficult,med_14
+fallow,(*1.) unused,(2) tiny,(3) worldly,(4) widespread,(5) youthful,med_15
+aggravate,(1) eke out,(2) settle down,(*3.) make worse,(4) pass by,(5) go without,med_16
+depreciated,(1) calmed,(2) admitted,(3) strengthened,(4) accepted,(*5.) devalued,med_17
+expect,(1) scuffle,(2) conceal,(3) demolish,(4) antipate,(5) minimize,med_18
+emulate,(*1.) imitate,(2) sympathize,(3) exclude,(4) return,(5) deter,med_19
+contradict,(1) agree,(*2.) dispute,(3) underline,(4) accept,(5) acclaim,med_20
+mitigate,(1) destroy,(2) pamper,(*3.) lessen,(4) study,(5) design,med_21
+onus,(1) completeness,(2) spirituality,(3) self-regard,(4) arrogance,(*5.) burden,med_22
+imperative,(1) regal,(2) rushed,(3) alluring,(*4.) necessary,(5) thoughtful,med_23
+pompous,(1) fast,(*2.) arrogant,(3) formal,(4) threatening,(5) reserved,med_24
+assuage,(1) increase,(2) insult,(3) critique,(*4.) soothe,(5) excite,med_25
+malice,(1) amusement,(2) intelligence,(3) pessimism,(*4.) hatred,(5) admiration,med_26
+improvident,(1) fortunate,(2) energized,(3) incomprehensible,(4) poor,(*5.) careless,med_27
+pristine,(*1.) clean,(2) prudish,(3) adaptable,(4) important,(5) primitive,med_28
+flaunt,(*1.) show off,(2) flag,(3) hide from,(4) tease,(5) work with,med_29
+wane,(1) brag,(2) cleanse,(3) enlarge,(*4.) fade,(5) react,med_30

@@ -1,0 +1,30 @@
+abeyance,(*1.) suspense,(2) stalemate,(3) laziness,(4) enquiry,(5) obscure,hard_1
+compendium,(1) bold,(*2.) compilation,(3) objective,(4) surplus,(5) enlargement,hard_2
+egress,(1) saying,(2) expand,(*3.) departure,(4) disregard,(5) changeable,hard_3
+fracas,(1) citation,(2) unusual,(3) refrain,(*4.) scuffle,(5) expert,hard_4
+iconoclast,(1) attraction,(2) embodiment,(3) powerful,(4) old,(*5.) critic,hard_5
+lambaste,(*1.) chastise,(2) hold back,(3) compliment,(4) repeal,(5) indifferent,hard_6
+neophyte,(1) perfectionist,(*2.) beginner,(3) affliction,(4) attentive,(5) boaster,hard_7
+polemic,(1) shameful,(2) grumpy,(*3.) rant,(4) sneer,(5) flashy,hard_8
+quiescence,(1) agreement,(2) offense,(3) disloyal,(*4.) inactivity,(5) approval,hard_9
+umbrage,(1) attack,(2) complain,(3) admiration,(4) tense,(*5.) offense,hard_10
+abjure,(*1.) reject,(2) welcome,(3) accept,(4) treat,(5) evaporate,hard_11
+anodyne,(1) deceive,(*2.) inoffensive,(3) harmful,(4) ruthless,(5) questionable,hard_12
+bilk,(1) muscular,(2) signal,(*3.) deceive,(4) slim,(5) avoid,hard_13
+canard,(1) fact,(2) complaint,(3) disbelief,(*4.) gossip,(5) selection,hard_14
+catalyst,(1) gem,(2) observation,(3) comparison,(4) substance,(*5.) stimulus,hard_15
+catharsis,(*1.) relief,(2) symbol,(3) attack,(4) wish,(5) treatment,hard_16
+coterie,(1) fine dish,(*2.) clique,(3) cultish,(4) support,(5) cohort,hard_17
+conscript,(1) ask,(2) agreement,(*3.) recruit,(4) experience,(5) install,hard_18
+diurnal,(1) manuscript,(2) tangible,(3) periodic,(*4.) daily,(5) general,hard_19
+dross,(1) ugly,(2) zesty,(3) hopeless,(4) agreement,(*5.) junk,hard_20
+eddy,(*1.) swirl,(2) vary,(3) delineate,(4) evaporate,(5) flap,hard_21
+frenetic,(1) controlled,(*2.) wild,(3) quick,(4) careless,(5) overview,hard_22
+gambit,(1) goal,(2) intend,(*3.) scheme,(4) comfort,(5) amusing,hard_23
+immutable,(1) malleable,(2) loud,(3) quiet,(*4.) permanent,(5) reckless,hard_24
+laconic,(1) lazy,(2) motivated,(3) tired,(4) grateful,(*5.) brief,hard_25
+milieu,(*1.) background,(2) entangle,(3) smelly,(4) contrive,(5) hopeless,hard_26
+nexus,(1) combination,(*2.) connection,(3) futuristic,(4) goals,(5) inconclusive,hard_27
+opine,(1) miss,(2) desire,(*3.) suggest,(4) demand,(5) cautious,hard_28
+panache,(1) chocolate,(2) self-conscious,(3) conscientious,(*4.) style,(5) mild,hard_29
+quotidian,(1) excess,(2) seldom,(3) maintain,(4) average,(*5.) daily,hard_30
