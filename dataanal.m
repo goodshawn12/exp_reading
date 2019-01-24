@@ -1,16 +1,22 @@
 clc;
 % close all;
-
-% Make sure eeglab is running with data imported 
+%% Import Data/Open EEGLAB
+[ALLEEG EEG CURRENTSET ALLCOM] = eeglab;
+EEG = pop_loadset('filename','exp_reading_S1.set','filepath','C:\\Users\\mwagn\\Documents\\UCSD\\Fall 2018\\Gert Lab\\Data Analysis\\');
+[ALLEEG, EEG, CURRENTSET] = eeg_store( ALLEEG, EEG, 0 );
+eeglab redraw;
 
 num_events = 506; % The number of trials being looked at (506 total)
 
-% Initialize arrays and counters
-type_array = zeros(num_events,1); % Array of 'types' of events, given my imported data (initialized)
-type_array = string(type_array);
 
-events_array = zeros(num_events,1); % Array of event markers, taken from 'types'(initialized)
-events_array = string(events_array);
+%% Event markers
+% Create an n x 1 array of level & question number, answer, and confidence level
+% out of .set 
+
+% Initialize arrays and counters
+type_array = string(zeros(num_events,1)); % Array of 'types' of events, given my imported data (initialized)
+
+events_array = string(zeros(num_events,1)); % Array of event markers, taken from 'types'(initialized) 
 
 i = 1;
 
@@ -23,11 +29,10 @@ while i <= num_events % loop through all the data points
 end
 
 % Remove instructions and test block event markers
-start_i = find(events_array == "start") % Index where exp starts
+start_i = find(events_array == "start"); % Index where exp starts
 events_array = events_array(start_i+6:end); 
 assert(events_array(1) == "easy_5"); % Actual trials should start w. "easy_5"
 
-size(events_array,1)
 % Remove excess event markers
 i = 1; % Initialize counter
 while i <= size(events_array,1)
@@ -45,12 +50,14 @@ while i <= size(events_array,1)
     %i = i + 1
     %events_array
 end
-events_array
+events_array;
 
 act_num_events = size(events_array,1); % # of trials once xs event markers are removed
 
-%------------------------------------------------------------------------
-% Organize array by trial
+
+%% Organize array by trial
+% Rearrange array to a 90 x 3 array where rows are questions and columns
+% are question type, answer, and confidence level
 
 % Initialize confidence (conf) and answer (ans) arrays
 conf_array = [];
@@ -98,7 +105,62 @@ while j <= size(events_array,1)
     j = j + 1;
 end
 
+str2mat(ans_array) 
+
+% Check array 
 assert(size(events_array,1) == size(ans_array,1)); % Should be an answer for every trial
 assert(size(events_array,1) == size(conf_array,1)); % Should be a confidence level for every trial
 
-trial_array = [events_array, ans_array, conf_array]
+trial_array = [events_array, ans_array, conf_array];
+
+%% Create behavioral table
+% Create a table containing behavioral data from trial
+
+trial_num = (1:90)';
+diff = zeros(90,1); % Initalize array
+
+% Obtain difficulty level
+i = 1; % initialize counter
+while i <= size(trial_array,1)
+    diff(i,1) = extractBefore(trial_array(i,1),"_");
+    i = i + 1;
+end
+
+varNames = {'Trial','Difficulty'};
+beh_tbl = table(trial_num, diff,'VariableNames',varNames);
+
+%% Create answer keys for each level
+
+easy_key = answerkey('easy_words.txt');
+med_key = answerkey('med_words.txt');
+hard_key = answerkey('hard_words.txt');
+
+%% Check if user answers are correct
+% Use function to create answer key arrays 30 x 2 where rows are questions
+% and columns are the question number and correct answer
+
+% Compare user answers to answer key
+correct = zeros(90,1); % Initialize array of logicals (correct/incorrect input)
+
+for trial=1:size(trial_array,1)
+    if contains(trial_array(trial,1), "easy")
+        %user_index = extractAfter(trial_array(trial,1),"_")
+        correct_ans = easy_key(str2num(char((extractAfter(trial_array(trial,1),"_")))),2); % Correct answer (1-5) from key
+        input_ans = trial_array(trial,2); % Input answer (1-5) from subject
+        correct(trial,1) = strcmp(correct_ans,input_ans);
+    elseif contains(trial_array(trial,1), "med")
+        correct_ans = med_key(str2num(char((extractAfter(trial_array(trial,1),"_")))),2); % Correct answer (1-5) from key
+        input_ans = trial_array(trial,2); % Input answer (1-5) from subject
+        correct(trial,1) = strcmp(correct_ans,input_ans);
+    elseif contains(trial_array(trial,1), "hard")
+        correct_ans = hard_key(str2num(char((extractAfter(trial_array(trial,1),"_")))),2); % Correct answer (1-5) from key
+        input_ans = trial_array(trial,2); % Input answer (1-5) from subject
+        correct(trial,1) = strcmp(correct_ans,input_ans);
+    end
+  
+end
+
+% Add to table
+
+
+
