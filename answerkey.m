@@ -21,11 +21,11 @@ i = 1; % Initialize counter
 while i <= size(A,1)
     question = A(i,1:5);
     TF = contains(question,pattern);
-    match = question(TF)
+    match = question(TF);
     key(i,:) = extractBetween(match, "*",".");
     
     i = i + 1;
 end
 
-key = [A(:,6),key]
+key = [A(:,6),key];
 end

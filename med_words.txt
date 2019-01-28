@@ -15,7 +15,7 @@ onerous,(1) practical,(2) deceitful,(3) truthful,(4) syncopated,(*5.) difficult,
 fallow,(*1.) unused,(2) tiny,(3) worldly,(4) widespread,(5) youthful,med_15
 aggravate,(1) eke out,(2) settle down,(*3.) make worse,(4) pass by,(5) go without,med_16
 depreciated,(1) calmed,(2) admitted,(3) strengthened,(4) accepted,(*5.) devalued,med_17
-expect,(1) scuffle,(2) conceal,(3) demolish,(4) antipate,(5) minimize,med_18
+expect,(1) scuffle,(2) conceal,(3) demolish,(*4.) anticipate,(5) minimize,med_18
 emulate,(*1.) imitate,(2) sympathize,(3) exclude,(4) return,(5) deter,med_19
 contradict,(1) agree,(*2.) dispute,(3) underline,(4) accept,(5) acclaim,med_20
 mitigate,(1) destroy,(2) pamper,(*3.) lessen,(4) study,(5) design,med_21
